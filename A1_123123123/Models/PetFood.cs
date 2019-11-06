@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
@@ -26,7 +27,9 @@ namespace A1_123123123.Models
         public virtual String Brand { get; set; }
         //foreign key relationship with Animal
         [Required]
+        
         public virtual Animal Animal { get; set; } //navigational property
+        [DisplayName("Animal")]
         public virtual int AnimalId { get; set; } //fkey id
     }
 }

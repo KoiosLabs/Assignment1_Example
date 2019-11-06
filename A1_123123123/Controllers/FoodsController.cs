@@ -47,7 +47,7 @@ namespace A1_123123123.Controllers
         // GET: Foods/Create
         public IActionResult Create()
         {
-            ViewData["AnimalId"] = new SelectList(_context.Animal, "Id", "Id");
+            ViewData["AnimalId"] = new SelectList(_context.Animal, "Id", "Name");
             return View();
         }
 
@@ -64,7 +64,7 @@ namespace A1_123123123.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["AnimalId"] = new SelectList(_context.Animal, "Id", "Id", petFood.AnimalId);
+            ViewData["AnimalId"] = new SelectList(_context.Animal, "Id", "Name", petFood.AnimalId);
             return View(petFood);
         }
 
@@ -81,7 +81,7 @@ namespace A1_123123123.Controllers
             {
                 return NotFound();
             }
-            ViewData["AnimalId"] = new SelectList(_context.Animal, "Id", "Id", petFood.AnimalId);
+            ViewData["AnimalId"] = new SelectList(_context.Animal, "Id", "Name", petFood.AnimalId);
             return View(petFood);
         }
 
@@ -117,7 +117,7 @@ namespace A1_123123123.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["AnimalId"] = new SelectList(_context.Animal, "Id", "Id", petFood.AnimalId);
+            ViewData["AnimalId"] = new SelectList(_context.Animal, "Id", "Name", petFood.AnimalId);
             return View(petFood);
         }
 
