@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using A1_123123123.Models;
 
 namespace A1_123123123
 {
@@ -24,6 +26,9 @@ namespace A1_123123123
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<A1_123123123Context>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("A1_123123123Context")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
