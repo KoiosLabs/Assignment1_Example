@@ -22,8 +22,8 @@ namespace A1_123123123.Models
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<PetFood>().HasData(new PetFood() { AnimalId = 2, Id = 2, Name = "Cheapfood", Brand = "PetSmart", Description = "The cheapest of cheap", NutritionalInfo = "ha!", Price = 12.99m, Weight = 20 },
-                new PetFood() { AnimalId = 1, Id = 3, Name = "Cheapfood", Brand = "PetSmart", Description = "The cheapest of cheap", NutritionalInfo = "ha!", Price = 12.99m, Weight = 20 } );
+            modelBuilder.Entity<PetFood>().HasData(new PetFood() { AnimalId = 3, Id = 2, Name = "Cheapfood", Brand = "PetSmart", Description = "The cheapest of cheap", NutritionalInfo = "ha!", Price = 12.99m, Weight = 20 },
+                new PetFood() { AnimalId = 4, Id = 3, Name = "Cheapfood", Brand = "PetSmart", Description = "The cheapest of cheap", NutritionalInfo = "ha!", Price = 12.99m, Weight = 20 } );
 
             modelBuilder.Entity<Animal>().HasData(new Animal() { Description = "Moos a lot", Id = 3, Name = "Cow" },
                 new Animal() { Id = 4, Name = "Donkey", Description = "Waffles" });

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace A1_123123123.Migrations
 {
     [DbContext(typeof(A1_123123123Context))]
-    [Migration("20191106214100_Seed Data")]
+    [Migration("20191106215732_Seed Data")]
     partial class SeedData
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -96,7 +96,7 @@ namespace A1_123123123.Migrations
                         new
                         {
                             Id = 2,
-                            AnimalId = 2,
+                            AnimalId = 3,
                             Brand = "PetSmart",
                             Description = "The cheapest of cheap",
                             Name = "Cheapfood",
@@ -107,7 +107,7 @@ namespace A1_123123123.Migrations
                         new
                         {
                             Id = 3,
-                            AnimalId = 1,
+                            AnimalId = 4,
                             Brand = "PetSmart",
                             Description = "The cheapest of cheap",
                             Name = "Cheapfood",

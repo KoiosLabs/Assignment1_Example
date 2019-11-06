@@ -94,7 +94,7 @@ namespace A1_123123123.Migrations
                         new
                         {
                             Id = 2,
-                            AnimalId = 2,
+                            AnimalId = 3,
                             Brand = "PetSmart",
                             Description = "The cheapest of cheap",
                             Name = "Cheapfood",
@@ -105,7 +105,7 @@ namespace A1_123123123.Migrations
                         new
                         {
                             Id = 3,
-                            AnimalId = 1,
+                            AnimalId = 4,
                             Brand = "PetSmart",
                             Description = "The cheapest of cheap",
                             Name = "Cheapfood",

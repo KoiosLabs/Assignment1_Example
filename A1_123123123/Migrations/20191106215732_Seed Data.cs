@@ -57,34 +57,26 @@ namespace A1_123123123.Migrations
             migrationBuilder.InsertData(
                 table: "Animal",
                 columns: new[] { "Id", "Description", "Name" },
-                values: new object[,]
-                {
-                    { 3, "Moos a lot", "Cow" },
-                    { 4, "Waffles", "Donkey" }
-                });
+                values: new object[] { 3, "Moos a lot", "Cow" });
+
+            migrationBuilder.InsertData(
+                table: "Animal",
+                columns: new[] { "Id", "Description", "Name" },
+                values: new object[] { 4, "Waffles", "Donkey" });
 
             migrationBuilder.InsertData(
                 table: "PetFood",
                 columns: new[] { "Id", "AnimalId", "Brand", "Description", "Name", "NutritionalInfo", "Price", "Weight" },
-                values: new object[,]
-                {
-                    { 2, 2, "PetSmart", "The cheapest of cheap", "Cheapfood", "ha!", 12.99m, 20f },
-                    { 3, 1, "PetSmart", "The cheapest of cheap", "Cheapfood", "ha!", 12.99m, 20f }
-                });
+                values: new object[] { 2, 3, "PetSmart", "The cheapest of cheap", "Cheapfood", "ha!", 12.99m, 20f });
+
+            migrationBuilder.InsertData(
+                table: "PetFood",
+                columns: new[] { "Id", "AnimalId", "Brand", "Description", "Name", "NutritionalInfo", "Price", "Weight" },
+                values: new object[] { 3, 4, "PetSmart", "The cheapest of cheap", "Cheapfood", "ha!", 12.99m, 20f });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DeleteData(
-                table: "Animal",
-                keyColumn: "Id",
-                keyValue: 3);
-
-            migrationBuilder.DeleteData(
-                table: "Animal",
-                keyColumn: "Id",
-                keyValue: 4);
-
             migrationBuilder.DeleteData(
                 table: "PetFood",
                 keyColumn: "Id",
@@ -94,6 +86,16 @@ namespace A1_123123123.Migrations
                 table: "PetFood",
                 keyColumn: "Id",
                 keyValue: 3);
+
+            migrationBuilder.DeleteData(
+                table: "Animal",
+                keyColumn: "Id",
+                keyValue: 3);
+
+            migrationBuilder.DeleteData(
+                table: "Animal",
+                keyColumn: "Id",
+                keyValue: 4);
 
             migrationBuilder.AlterColumn<string>(
                 name: "NutritionalInfo",
